@@ -6,22 +6,26 @@ This repository serves as the persistent memory and backup for **Hermes Multi-Ag
 
 | Agent | Role | Purpose |
 |-------|------|---------|
-| **hercules-qa** | QA Engineer | Testing, Bug Hunting, PRD Verification |
-| **emkay-pentest** | Security Auditor | Hardening, Secret Management, Pentest |
-| **clickup-manager** | Task Manager | Task & Project Management Specialist |
-| **notebook-researcher** | Knowledge Lead | Research, Documentation, Knowledge Graph |
+| **product-strategist** | Product Strategist (CPO) | MVP definition, User Stories, Roadmap |
+| **architect** | Architect (CTO) | Tech stack, Database Schema, API Design |
+| **fullstack-developer** | Fullstack Developer | Implementation, Feature building, Clean Code |
+| **ui-ux-designer** | UI/UX Designer | User Flow, Visual Design, Components |
+| **qa-engineer** | QA Engineer | Testing, Bug Hunting, PRD Verification |
+| **security-auditor** | Security Auditor | Hardening, Secret Management, Audit |
 
 ## 🛠️ Tech Stack
 
 - **Orchestration**: Hermes Agent (Telegram)
 - **Multi-Agent**: Sub-agents with domain-specific SOUL/notes
+- **Core Standards**: Modular, Typed, Documented, QA-Verified
 - **Storage**: Persistent backups to GitHub
 
 ## 🔄 Workflow
 
-1. **Plan** (Product Strategist) → **Design** (Architect) → **Approval**
-2. **Code** (Developer) → **Polish** (UI/UX)
-3. **Verify** (QA) → **Protect** (Security) → **Deploy**
+1. `Product Strategist` (Plan) $\rightarrow$ `Architect` (Design) $\rightarrow$ **User Approval**
+2. `Developer` (Code) $\rightarrow$ `UI/UX` (Polish)
+3. `QA Engineer` (Verify) $\rightarrow$ `Security Auditor` (Protect)
+4. Final Review $\rightarrow$ **Deployment**
 
 ## 📂 Backup Workflow
 
