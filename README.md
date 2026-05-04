@@ -1,19 +1,30 @@
-# 🤖 Hermes Multi-Agent Team Backup
+# 🚀 Startup Engine — Agentic Engineering Framework
 
-This repository serves as the persistent memory and structural backup for the Hermes Multi-Agent Team. It stores the identities, domain-specific notes, and shared goals of the specialized agents.
+This repository serves as the persistent memory and backup for **Hermes Multi-Agent Team**, an agentic engineering system orchestrated via Telegram.
 
-## 👥 The Team
-- **Hercules-QA**: Quality Assurance & Testing Lead.
-- **Emkay-Pentest**: Security Auditor & Penetration Tester.
-- **ClickUp-Manager**: Task & Project Management Specialist.
-- **Notebook-Researcher**: Knowledge Management & Research Lead.
+## 👥 Agent Team
 
-## 📂 Repository Structure
-- `/agents/`: Contains private contexts for each agent.
-    - `SOUL.md`: Defines the agent's personality and core principles.
-    - `notes.md`: Domain-specific knowledge and persistent memory.
-- `TEAM_GOALS.md`: Shared OKRs and high-level priorities.
-- `PROJECT_STATUS.md`: Current state of the project and recent wins.
+| Agent | Role | Purpose |
+|-------|------|---------|
+| **hercules-qa** | QA Engineer | Testing, Bug Hunting, PRD Verification |
+| **emkay-pentest** | Security Auditor | Hardening, Secret Management, Pentest |
+| **clickup-manager** | Task Manager | Task & Project Management Specialist |
+| **notebook-researcher** | Knowledge Lead | Research, Documentation, Knowledge Graph |
 
-## 🔄 Backup Workflow
-This repository is automatically updated daily at 4 PM (GMT+7) to ensure that all insights and memories gathered by the agents are preserved.
+## 🛠️ Tech Stack
+
+- **Orchestration**: Hermes Agent (Telegram)
+- **Multi-Agent**: Sub-agents with domain-specific SOUL/notes
+- **Storage**: Persistent backups to GitHub
+
+## 🔄 Workflow
+
+1. **Plan** (Product Strategist) → **Design** (Architect) → **Approval**
+2. **Code** (Developer) → **Polish** (UI/UX)
+3. **Verify** (QA) → **Protect** (Security) → **Deploy**
+
+## 📂 Backup Workflow
+
+> Last updated: `2026-05-04`
+
+This repository is automatically updated by Hermes Agent to preserve insights from all agents.
