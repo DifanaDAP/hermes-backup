@@ -15,7 +15,7 @@
 3. `QA Engineer` (Verify) $\rightarrow$ `Security Auditor` (Protect)
 4. Final Review $\rightarrow$ **Deployment**
 
-## 🛠️ Engineering Standards
+## 🛠 Engineering Standards
 - **Code**: Modular, Typed, documented.
 - **Verification**: No feature is "Done" without a QA report.
 - **Iterative**: Plan $\rightarrow$ Execute $\rightarrow$ Verify $\rightarrow$ Refine.
