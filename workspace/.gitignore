@@ -1,0 +1,66 @@
+# Secrets & Tokens
+.env
+.env.*
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.p12
+*.jks
+keystore*
+secrets/
+.secrets/
+*token*
+*credential*
+*.api-key
+
+# IDE & Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS Temp & Cache
+__pycache__/
+*.pyc
+*.pyo
+.cache/
+tmp/
+temp/
+*.tmp
+.DS_Store
+
+# Logs & Output
+logs/
+*.log
+output/
+*.output
+hermes_cache/
+cache/
+node_modules/
+.pnpm-store/
+
+# Large/Binary
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.exe
+*.dll
+*.so
+*.dylib
+dist/
+build/
+
+# Private/Personal
+*.private
+.local/
+.local/*
+
+# GitHub specific
+.gitattributes
