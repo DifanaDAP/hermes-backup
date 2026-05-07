@@ -1,49 +1,6 @@
 {
   "jobs": [
     {
-      "id": "d6466a0c3210",
-      "name": "Daily Agents Backup",
-      "prompt": "Perform a focused daily GitHub backup of the Multi-Agent Team agent memory only.\n\nStrict allowed scope:\n- INCLUDE: agents/**/SOUL.md\n- INCLUDE: agents/**/notes.md\n- INCLUDE: TEAM_GOALS.md\n- INCLUDE: PROJECT_STATUS.md\n- INCLUDE: .gitignore only if ignore rules need maintenance.\n- DO NOT add or commit any other files, including README.md, CLAUDE.md, second_brain_blueprint.md, config.yaml, .env, tokens, credentials, secrets, ~/.hermes/sessions, cron outputs, memories, skills, logs, cache, node_modules, binaries, archives, .git internals, temporary files, or unrelated project files.\n- DO NOT use `git add .`, `git add -A`, or broad adds. Use explicit paths only.\n\nTask:\n1. Navigate to /home/didit-ai/.hermes/workspace.\n2. Verify the repo status with `git status --short`.\n3. Stage only the allowed paths with:\n   git add agents TEAM_GOALS.md PROJECT_STATUS.md .gitignore\n4. Before committing, verify staged files with `git diff --cached --name-only` and abort if any staged file is outside strict allowed scope.\n5. If there are staged changes, commit with a clear message like `agents: daily memory backup YYYY-MM-DD`.\n6. Push to origin main using the repo's configured credentials.\n7. If there are no changes, do not create an empty commit; still verify `git push origin HEAD:main` succeeds or reports `Everything up-to-date`.\n8. Final response must summarize exactly which files were committed or state that nothing changed, and include the model/provider used for this cron run. If the exact cron model/provider is not explicitly available, state that it used the configured default model/provider for Hermes cron.\n\nImportant safety rules:\n- Never print or expose tokens.\n- Never modify Git remotes to include tokens.\n- If authentication fails, report the failure and stop; do not ask for or reveal token values.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 16 * * *",
-        "display": "0 16 * * *"
-      },
-      "schedule_display": "0 16 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 7
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-04-29T11:47:11.611048+07:00",
-      "next_run_at": "2026-05-06T16:00:00+07:00",
-      "last_run_at": "2026-05-05T16:00:58.442562+07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "1402746701",
-        "chat_name": "Di 01",
-        "thread_id": null
-      },
-      "enabled_toolsets": [
-        "terminal"
-      ],
-      "workdir": "/home/didit-ai/.hermes/workspace"
-    },
-    {
       "id": "ba8dfdac88c5",
       "name": "hermes-daily-backup",
       "prompt": "Run daily backup of Hermes configuration with secret redaction.\n\nTask:\n1. Copy critical files (.env, config.yaml, skills/, agents/, cron/, memories/, workspace/) to staging\n2. Scan and replace secrets (API keys, tokens, passwords) with placeholders like [PLACEHOLDER]\n3. Copy staged files to hermes-backup repo (git repo at ~/.hermes/backup_repo)\n4. Commit with date + summary of files\n5. Push to https://github.com/DifanaDAP/hermes-backup.git\n6. If success: send one-liner to Discord #monitoring channel\n7. If fail: report error to Discord\n\nImportant:\n- Use GITHUB_TOKEN from environment variable (already set in cron job env)\n- Skip JSON and MD file redaction (complex format)\n- Report Discord with status emoji (\u2705 or \u274c)\n\nRun every day at 4:30 PM (GMT+7 / Asia/Jakarta)",
@@ -64,15 +21,15 @@
       "schedule_display": "30 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T14:57:13.698627+07:00",
-      "next_run_at": "2026-05-07T10:30:00+07:00",
-      "last_run_at": "2026-05-05T10:33:04.641088+07:00",
+      "next_run_at": "2026-05-08T10:30:00+07:00",
+      "last_run_at": "2026-05-06T10:33:23.516529+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -107,15 +64,15 @@
       "schedule_display": "0 17 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-05T08:12:01.093856+07:00",
-      "next_run_at": "2026-05-06T17:00:00+07:00",
-      "last_run_at": "2026-05-05T17:00:15.987454+07:00",
+      "next_run_at": "2026-05-07T17:00:00+07:00",
+      "last_run_at": "2026-05-06T17:00:52.447866+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -132,5 +89,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-05-06T10:30:25.610041+07:00"
+  "updated_at": "2026-05-07T10:30:23.553851+07:00"
 }

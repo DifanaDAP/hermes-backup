@@ -65,7 +65,7 @@ def search(query=None, author=None, category=None, ids=None, max_results=5, sort
         arxiv_id = full_id.split('v')[0]  # base ID for links
         published = entry.find('a:published', NS).text[:10]
         updated = entry.find('a:updated', NS).text[:10]
-        authors = [PLACEHOLDER] '.join(a.find('a:name', NS).text for a in entry.findall('a:author', NS))
+        authors = '[PLACEHOLDER]'.join(a.find('a:name', NS).text for a in entry.findall('a:author', NS))
         summary = entry.find('a:summary', NS).text.strip().replace('\n', ' ')
         cats = ', '.join(c.get('term') for c in entry.findall('a:category', NS))
         
@@ -86,7 +86,7 @@ if __name__ == "__main__":
         sys.exit(0)
     
     query = None
-    author = [PLACEHOLDER]
+    author = None
     category = None
     ids = None
     max_results = 5
@@ -100,7 +100,7 @@ if __name__ == "__main__":
         elif args[i] == "--sort" and i + 1 < len(args):
             sort = args[i + 1]; i += 2
         elif args[i] == "--author" and i + 1 < len(args):
-            author = [PLACEHOLDER] + 1]; i += 2
+            author = [PLACEHOLDER]
         elif args[i] == "--category" and i + 1 < len(args):
             category = args[i + 1]; i += 2
         elif args[i] == "--id" and i + 1 < len(args):

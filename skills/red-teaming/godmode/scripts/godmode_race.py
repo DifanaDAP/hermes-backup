@@ -12,7 +12,7 @@ Usage in execute_code:
     result = race_models(
         query="Your query here",
         tier="standard",
-        api_key=[PLACEHOLDER]
+        api_key=[PLACEHOLDER]"OPENROUTER_API_KEY"),
     )
     print(f"Winner: {result['model']} (score: {result['score']})")
     print(result['content'])
@@ -320,7 +320,7 @@ def race_models(query, tier="standard", api_key=None, system_prompt=None,
     if OpenAI is None:
         raise ImportError("openai package required. Install with: pip install openai")
     
-    api_key = [PLACEHOLDER] or os.getenv("OPENROUTER_API_KEY")
+    api_key = [PLACEHOLDER]"OPENROUTER_API_KEY")
     if not api_key:
         raise ValueError("No API key. Set OPENROUTER_API_KEY or pass api_key=")
     
@@ -445,7 +445,7 @@ def race_godmode_classic(query, api_key=None, timeout=60):
     if OpenAI is None:
         raise ImportError("openai package required. Install with: pip install openai")
     
-    api_key = [PLACEHOLDER] or os.getenv("OPENROUTER_API_KEY")
+    api_key = [PLACEHOLDER]"OPENROUTER_API_KEY")
     if not api_key:
         raise ValueError("No API key. Set OPENROUTER_API_KEY or pass api_key=")
     

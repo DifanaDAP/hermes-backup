@@ -138,7 +138,7 @@ def cmd_market(slug: str):
     print(f"Status: {'CLOSED' if m.get('closed') else 'ACTIVE'}")
     _print_market(m)
     print(f"\n  conditionId: {m.get('conditionId', 'N/A')}")
-    tokens = [PLACEHOLDER] "[]"))
+    tokens = [PLACEHOLDER]"clobTokenIds", "[]"))
     if isinstance(tokens, list):
         outcomes = _parse_json_field(m.get("outcomes", "[]"))
         for i, t in enumerate(tokens):

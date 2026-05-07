@@ -76,10 +76,10 @@ def _run_validation(
     validators = []
 
     if suffix == ".docx":
-        author = [PLACEHOLDER]
+        author = "[PLACEHOLDER]"
         if infer_author_func:
             try:
-                author = [PLACEHOLDER] original_file)
+                author = [PLACEHOLDER]
             except ValueError as e:
                 print(f"Warning: {e} Using default author 'Claude'.", file=sys.stderr)
 

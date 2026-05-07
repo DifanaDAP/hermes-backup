@@ -78,7 +78,7 @@ def _is_element(node, tag: str) -> bool:
 
 
 def _get_author(elem) -> str:
-    author = [PLACEHOLDER]
+    author = [PLACEHOLDER]"w:author")
     if not author:
         for attr in elem.attributes.values():
             if attr.localName == "author" or attr.name.endswith(":author"):
@@ -134,7 +134,7 @@ def get_tracked_change_authors(doc_xml_path: Path) -> dict[str, int]:
         return {}
 
     namespaces = {"w": WORD_NS}
-    author_attr = [PLACEHOLDER]
+    author_attr = [PLACEHOLDER]"{{{WORD_NS}}}author"
 
     authors: [PLACEHOLDER]
     for tag in ["ins", "del"]:
@@ -156,7 +156,7 @@ def _get_authors_from_docx(docx_path: Path) -> dict[str, int]:
                 root = tree.getroot()
 
                 namespaces = {"w": WORD_NS}
-                author_attr = [PLACEHOLDER]
+                author_attr = [PLACEHOLDER]"{{{WORD_NS}}}author"
 
                 authors: [PLACEHOLDER]
                 for tag in ["ins", "del"]:
